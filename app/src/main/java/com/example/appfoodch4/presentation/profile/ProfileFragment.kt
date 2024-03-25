@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.activity.enableEdgeToEdge
 import com.example.appfoodch4.R
-import com.example.appfoodch4.databinding.ActivityDetailsProductBinding
 import com.example.appfoodch4.databinding.FragmentHomeBinding
 import com.example.appfoodch4.databinding.FragmentProfileBinding
 
