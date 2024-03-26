@@ -12,7 +12,7 @@ import com.example.appfoodch4.databinding.LayoutDetailContentBinding
 import com.example.appfoodch4.databinding.LayoutDetailFoodBinding
 import com.example.appfoodch4.databinding.LayoutDetailLocationBinding
 
-class DetailActivity : AppCompatActivity() {
+class DetailFoodActivity : AppCompatActivity() {
     private lateinit var binding: ActivityFoodDetailBinding
     private lateinit var bannerBinding: LayoutDetailBannerBinding
     private lateinit var contentBinding: LayoutDetailContentBinding
@@ -50,7 +50,7 @@ class DetailActivity : AppCompatActivity() {
             }
         }
         bannerBinding.apply {
-            Glide.with(this@DetailActivity)
+            Glide.with(this@DetailFoodActivity)
                 .load(food.imagefoodPictUrl)
                 .into(ivProvile)}
     }
