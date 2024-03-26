@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".feature.detail.DetailActivity">
+    tools:context=".prensentation.detailproduct.DetailFoodActivity">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -42,7 +42,7 @@
             android:layout_marginEnd="15dp"
             android:layout_marginStart="8dp"
             android:layout_marginTop="5dp"
-            android:textSize="12sp"
+            android:textSize="14sp"
             app:layout_constraintStart_toEndOf="@+id/iv_location"
             app:layout_constraintTop_toBottomOf="@id/tv_location"
             tools:text="Lead Android @Everywhere" />

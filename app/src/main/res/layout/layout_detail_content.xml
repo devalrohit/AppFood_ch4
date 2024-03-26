@@ -1,52 +1,69 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".feature.detail.DetailActivity">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
+        android:id="@+id/ll_counter_product"
+        android:layout_width="130dp"
         android:layout_height="wrap_content"
-        android:id="@+id/layout_detail_content"
-        android:layout_marginTop="10dp">
+        android:background="@drawable/bg_button_rounded_border_transparent"
+        android:padding="4dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/btn_checkout"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="8dp">
 
-        <TextView
-            android:id="@+id/tv_numberadd"
+
+        <ImageView
+            android:id="@+id/iv_minus"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="5dp"
-            android:text="1"
-            android:padding="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_checkout"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:src="@drawable/ic_minus"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
-        <ImageButton
-            android:id="@+id/btn_plus"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ib_plus"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_numberadd"
-            app:layout_constraintStart_toEndOf="@+id/tv_numberadd" />
-        <ImageButton
-            android:id="@+id/btn_min"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/ib_minus"
-            app:layout_constraintBottom_toBottomOf="@+id/tv_numberadd"
-            app:layout_constraintEnd_toStartOf="@+id/tv_numberadd" />
-
-        <Button
-            android:id="@+id/btn_checkout"
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/tv_product_count"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:text="Tambah ke keranjang"
-            android:layout_marginStart="15dp"
-            android:layout_marginEnd="15dp"
-            android:layout_marginBottom="15dp"
+            android:layout_marginHorizontal="8dp"
+            android:textAlignment="center"
+            android:textStyle="bold"
+            android:text="@string/_1"
+            app:layout_constraintStart_toEndOf="@id/iv_minus"
+            app:layout_constraintEnd_toStartOf="@id/iv_plus"
+            app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintBottom_toBottomOf="parent" />
 
+        <ImageView
+            android:id="@+id/iv_plus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="240dp"
+            android:src="@drawable/ic_plus"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/btn_checkout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tambah ke keranjang"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="15dp"
+        app:layout_constraintTop_toBottomOf="@id/ll_counter_product"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 </androidx.cardview.widget.CardView>

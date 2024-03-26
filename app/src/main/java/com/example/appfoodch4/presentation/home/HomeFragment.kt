@@ -19,8 +19,8 @@ import androidx.recyclerview.widget.GridLayoutManager
 import androidx.core.content.ContextCompat
 import androidx.core.os.bundleOf
 import androidx.navigation.fragment.findNavController
-import com.catnip.layoutingexample.presentation.fooddetail.FoodDetailFragment
 import com.example.appfoodch4.data.model.Category
+import com.example.appfoodch4.prensentation.detailproduct.DetailFoodActivity
 
 
 class HomeFragment : Fragment() {
@@ -41,7 +41,6 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        setAction()
         setListCategory()
         setButtonText(isUsingGridMode)
         bindFoodList(isUsingGridMode)
@@ -58,7 +57,7 @@ class HomeFragment : Fragment() {
     }
     private fun navigateToDetail(item: Food) {
         val navController = findNavController()
-        val bundle = bundleOf(Pair(FoodDetailFragment.EXTRAS_ITEM, item))
+        val bundle = bundleOf(Pair(DetailFoodActivity.EXTRAS_ITEM, item))
         navController.navigate(R.id.action_menu_tab_home_to_detailFoodActivity, bundle)
     }
 
@@ -99,14 +98,6 @@ class HomeFragment : Fragment() {
             adapter = categoryAdapter
         }
         categoryAdapter.submitData(data)
-    }
-
-    private fun setAction() {
-        binding.layoutHeader.ivProfile.setOnClickListener {
-            Toast.makeText(requireContext(), "Hai Rohit", Toast.LENGTH_SHORT).show()
-        }
-        binding.layoutHeader.tvName.text = requireContext().getString(R.string.name)
-
     }
 
 

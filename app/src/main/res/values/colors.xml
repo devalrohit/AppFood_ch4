@@ -63,4 +63,5 @@
     <color name="md_theme_dark_scrim">#000000</color>
     <color name="white">#FFFFFF</color>
     <color name="black">#000000</color>
+    <color name="grey_border">#554C4B</color>
 </resources>
